@@ -7,8 +7,8 @@ configfile: "config/config.yaml"
 
 f = []
 
-f.extende(expand("{data}/test.txt"),
-            data = config['data'])
+f.extend(expand("{data}/test.txt",
+            data = config['data']))
 
 rule all:
     input:
@@ -19,5 +19,5 @@ rule test:
         "{data}/test.txt"
     shell:
         """
-        echo "successfull" > {output}
+        echo "successful" > {output}
         """
