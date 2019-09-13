@@ -4,6 +4,9 @@ import pandas as pd
 
 configfile: "config/config.yaml"
 
+# read samples or metadata
+#samplefile = 'resources/samples.csv'
+#samples = pd.read_csv(samplefile)
 
 f = []
 
