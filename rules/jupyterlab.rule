@@ -1,0 +1,13 @@
+#####################
+# rule to get python script from jupyter lab notebook
+
+rule jupyterToPy:
+    input:
+        "{file}.ipynb"
+    output:
+        "{file}.py"
+    priority: 100
+    shell:
+        """
+        jupyter nbconvert --to script {input}
+        """

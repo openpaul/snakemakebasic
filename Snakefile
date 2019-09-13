@@ -3,6 +3,7 @@ import pandas as pd
 # Snakemake example
 
 configfile: "config/config.yaml"
+include: "rules/jupyterlab.rule"
 
 # read samples or metadata
 #samplefile = 'resources/samples.csv'
@@ -24,3 +25,5 @@ rule test:
         """
         echo "successful" > {output}
         """
+
+
