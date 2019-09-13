@@ -1,0 +1,11 @@
+__default__:
+    nCPU: 1
+    mem: 1000
+    resources : "\"select[mem>1000] rusage[mem=1000] span[hosts=1]\""
+    name      : "{rule}"
+    output    : "logs/{rule}.%J.o"
+    error     : "logs/{rule}.%J.e"
+
+test:
+    mem: 40000
+    resources : "\"select[mem>40000] rusage[mem=40000] span[hosts=1]\""
