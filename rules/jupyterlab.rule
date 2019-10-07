@@ -11,3 +11,14 @@ rule jupyterToPy:
         """
         jupyter nbconvert --to script {input}
         """
+
+rule jupyterToR:
+    input:
+        "{file}.ipynb"
+    output:
+        "{file}.R"
+    priority: 100
+    shell:
+        """
+        jupyter nbconvert --to script {input} --stdout >> {output}
+        """
