@@ -1,6 +1,7 @@
 __default__:
     nCPU: 1
     mem: 1000
+    bigmem: ""
     resources : "\"select[mem>1000] rusage[mem=1000] span[hosts=1]\""
     name      : "{rule}"
     output    : "logs/{rule}.%J.o"
