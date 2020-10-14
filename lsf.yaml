@@ -1,0 +1,5 @@
+__default__:
+    - "-g /sn_drep"
+
+dRep_validation:
+    - "-P bigmem -g /sn_drep"
